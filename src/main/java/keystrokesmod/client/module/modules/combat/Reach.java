@@ -40,7 +40,7 @@ public class Reach extends Module {
    public void onMouse(MouseEvent ev) {
       // legit event
       if(!Utils.Player.isPlayerInGame()) return;
-      Module autoClicker = Raven.moduleManager.getModuleByClazz(LeftClicker.class);
+      Module autoClicker = Raven.moduleManager.getModuleByClass(LeftClicker.class);
       if (autoClicker != null && autoClicker.isEnabled() && Mouse.isButtonDown(0)) return;
       if (ev.button >= 0 && ev.buttonstate) {
          call();
@@ -51,7 +51,7 @@ public class Reach extends Module {
    public void onRenderTick(TickEvent.RenderTickEvent ev) {
       // autoclick event
       if(!Utils.Player.isPlayerInGame()) return;
-      Module autoClicker = Raven.moduleManager.getModuleByClazz(LeftClicker.class);
+      Module autoClicker = Raven.moduleManager.getModuleByClass(LeftClicker.class);
       if (autoClicker == null || !autoClicker.isEnabled()) return;
 
       if (autoClicker.isEnabled()  && Mouse.isButtonDown(0)){
@@ -84,7 +84,7 @@ public class Reach extends Module {
    }
 
    private static Object[] zz(double zzD, double zzE) {
-      Module reach = Raven.moduleManager.getModuleByClazz(Reach.class);
+      Module reach = Raven.moduleManager.getModuleByClass(Reach.class);
       if (reach != null && !reach.isEnabled()) {
          zzD = mc.playerController.extendedReach() ? 6.0D : 3.0D;
       }

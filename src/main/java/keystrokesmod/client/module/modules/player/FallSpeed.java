@@ -21,8 +21,8 @@ public class FallSpeed extends Module {
 
    public void update() {
       if ((double)mc.thePlayer.fallDistance >= 2.5D) {
-         Module fly = Raven.moduleManager.getModuleByClazz(Fly.class);
-         Module noFall = Raven.moduleManager.getModuleByClazz(NoFall.class);
+         Module fly = Raven.moduleManager.getModuleByClass(Fly.class);
+         Module noFall = Raven.moduleManager.getModuleByClass(NoFall.class);
 
          if (
               (fly != null && fly.isEnabled()) ||

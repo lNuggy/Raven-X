@@ -13,7 +13,7 @@ public class Timer extends Module {
    public Timer() {
       super("Timer", ModuleCategory.movement);
       a = new SliderSetting("Speed", 1.0D, 0.5D, 2.5D, 0.01D);
-      b = new TickSetting("Strafe only", false);
+      b = new TickSetting("strafe only", false);
       this.registerSetting(a);
       this.registerSetting(b);
    }

@@ -13,7 +13,7 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class ModuleComponent implements Component {
-   private final int c1 = (new Color(0, 85, 255)).getRGB();
+   private final int c1 = (new Color(170, 119, 174)).getRGB();
    private final int c2 = (new Color(154, 2, 255)).getRGB();
    private final int c3 = (new Color(175, 143, 233) ).getRGB();
    public Module mod;

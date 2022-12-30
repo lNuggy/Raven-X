@@ -244,7 +244,7 @@ public class Utils {
          }
       }
 
-      public static void bop(double s) {
+      public static void strafe(double s) {
          double forward = mc.thePlayer.movementInput.moveForward;
          double strafe = mc.thePlayer.movementInput.moveStrafe;
          float yaw = mc.thePlayer.rotationYaw;
@@ -396,7 +396,7 @@ public class Utils {
       }
 
       public static boolean autoClickerClicking() {
-         Module autoClicker = Raven.moduleManager.getModuleByClazz(LeftClicker.class);
+         Module autoClicker = Raven.moduleManager.getModuleByClass(LeftClicker.class);
          if (autoClicker != null && autoClicker.isEnabled()) {
             return autoClicker.isEnabled() && Mouse.isButtonDown(0);
          } //else return mouseManager.getLeftClickCounter() > 1 && System.currentTimeMillis() - mouseManager.leftClickTimer < 300L;
@@ -1327,6 +1327,18 @@ public class Utils {
       }
    }
 
+   public static double getJumpBoostModifier(double baseJumpHeight) {
+      return getJumpBoostModifier(baseJumpHeight, true);
+   }
+
+   public static double getJumpBoostModifier(double baseJumpHeight, boolean potionJump) {
+      if (mc.thePlayer.isPotionActive(Potion.jump) && potionJump) {
+         int amplifier = mc.thePlayer.getActivePotionEffect(Potion.jump).getAmplifier();
+         baseJumpHeight += ((float) (amplifier + 1) * 0.1f);
+      }
+
+      return baseJumpHeight;
+   }
 
    public static class Modes {
       public enum ClickEvents {

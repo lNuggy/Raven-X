@@ -113,7 +113,7 @@ public class ModuleManager {
       modules.add(m);
    } 
 
-   // prefer using getModuleByClazz();
+   // prefer using getModuleByClass();
    // ok might add in 1.0.18
    public Module getModuleByName(String name) {
       if (!initialized) return null;
@@ -125,7 +125,7 @@ public class ModuleManager {
       return null;
    }
 
-   public Module getModuleByClazz(Class<? extends Module> c) {
+   public Module getModuleByClass(Class<? extends Module> c) {
       if (!initialized) return null;
 
       for (Module module : modules) {

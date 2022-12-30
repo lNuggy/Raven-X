@@ -60,7 +60,7 @@ public class BridgeAssist extends Module {
             return;
         }
 
-        Module safeWalk = Raven.moduleManager.getModuleByClazz(SafeWalk.class);
+        Module safeWalk = Raven.moduleManager.getModuleByClass(SafeWalk.class);
         if (safeWalk != null && safeWalk.isEnabled()) {
             if (!workWithSafeWalk.isToggled()) {
                 return;

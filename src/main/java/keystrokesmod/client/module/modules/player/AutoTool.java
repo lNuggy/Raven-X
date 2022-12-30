@@ -55,7 +55,7 @@ public class AutoTool extends Module {
 
 
         //make sure that we are allowed to breack blocks if ac is enabled
-        LeftClicker autoClicker = (LeftClicker) Raven.moduleManager.getModuleByClazz(LeftClicker.class);
+        LeftClicker autoClicker = (LeftClicker) Raven.moduleManager.getModuleByClass(LeftClicker.class);
         if(autoClicker.isEnabled()) {
             if(!LeftClicker.breakBlocks.isToggled()) {
                 return;

@@ -68,7 +68,7 @@ public class AimAssist extends Module {
 
          if (!weaponOnly.isToggled() || Utils.Player.isPlayerHoldingWeapon()) {
 
-            Module autoClicker = Raven.moduleManager.getModuleByClazz(RightClicker.class);
+            Module autoClicker = Raven.moduleManager.getModuleByClass(RightClicker.class);
             //what if player clicking but mouse not down ????
             if ((clickAim.isToggled() && Utils.Client.autoClickerClicking()) || (Mouse.isButtonDown(0) && autoClicker != null && !autoClicker.isEnabled()) || !clickAim.isToggled()) {
                Entity en = this.getEnemy();

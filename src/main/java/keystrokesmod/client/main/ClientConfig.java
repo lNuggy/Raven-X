@@ -183,7 +183,7 @@ public class ClientConfig {
             } catch (Exception e){}
          } else if(line.startsWith(terminalHiddenPrefix)){
             try{
-               Terminal terminalModule = (Terminal) Raven.moduleManager.getModuleByClazz(Terminal.class);
+               Terminal terminalModule = (Terminal) Raven.moduleManager.getModuleByClass(Terminal.class);
                terminalModule.setToggled(!Boolean.parseBoolean(line.replace(terminalHiddenPrefix, "")));
             } catch (Exception e){}
          }

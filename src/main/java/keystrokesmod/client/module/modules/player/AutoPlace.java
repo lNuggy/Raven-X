@@ -55,7 +55,7 @@ public class AutoPlace extends Module {
    }
 
    public void update() {
-      Module fastPlace = Raven.moduleManager.getModuleByClazz(FastPlace.class);
+      Module fastPlace = Raven.moduleManager.getModuleByClass(FastPlace.class);
       if (a.isToggled() && Mouse.isButtonDown(1) && !mc.thePlayer.capabilities.isFlying && fastPlace != null && !fastPlace.isEnabled()) {
          ItemStack i = mc.thePlayer.getHeldItem();
          if (i == null || !(i.getItem() instanceof ItemBlock)) {

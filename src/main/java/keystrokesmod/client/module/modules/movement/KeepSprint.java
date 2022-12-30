@@ -22,7 +22,7 @@ public class KeepSprint extends Module {
 
    public static void sl(Entity en) {
       double dist;
-      Module reach = Raven.moduleManager.getModuleByClazz(Reach.class);
+      Module reach = Raven.moduleManager.getModuleByClass(Reach.class);
       if (c.isToggled() && reach != null && reach.isEnabled() && !mc.thePlayer.capabilities.isCreativeMode) {
          dist = mc.objectMouseOver.hitVec.distanceTo(mc.getRenderViewEntity().getPositionEyes(1.0F));
          double val;
